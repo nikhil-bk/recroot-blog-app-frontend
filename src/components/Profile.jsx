@@ -16,7 +16,7 @@ const Profile = () => {
       {
         userData ?
           <div style={{ display: 'flex', flexDirection: 'row', gap: "20px", width: "150px", height: "175px", borderRadius: "50%" }}>
-            <div style={{ display: 'flex', flexDirection: "column", justifyContent: "center", width: 'fit-content' }}>
+            <div style={{ display: 'flex', flexDirection: "column", justifyContent: "center" }}>
               <img src={userData?.profilePicture?.url} alt="profile photo" />
               <label>Profile Picture</label>
             </div>
