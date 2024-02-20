@@ -22,6 +22,10 @@ const BlogCard = (props) => {
             console.log('Delete canceled');
         }
     }
+    const handleEdit=(e)=>{
+        e.preventDefault()
+        navigate("/my-blogs/edit", { state: { _id: props.blogItem._id } })
+    }
     return (
         <div>
             <Card className='card' onClick={() => navigate("/blog", { state: { _id: props.blogItem._id } })}>
@@ -40,7 +44,7 @@ const BlogCard = (props) => {
                         </div>
                         {props.page === "my-blog" ?
                             <div>
-                                <Button onClick={() => navigate("/my-blogs/edit", { state: { _id: props.blogItem._id } })} className='m-2' variant='warning'>Edit</Button>
+                                <Button onClick={handleEdit} className='m-2' variant='warning'>Edit</Button>
                                 <Button onClick={handleBlogDelete} className='m-2' variant='danger'>Delete</Button>
                             </div> :
                             <></>
