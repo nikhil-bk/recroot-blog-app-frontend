@@ -23,7 +23,7 @@ const BlogCard = (props) => {
         }
     }
     const handleEdit=(e)=>{
-        e.preventDefault()
+        e.stopPropagation();
         navigate("/my-blogs/edit", { state: { _id: props.blogItem._id } })
     }
     return (
