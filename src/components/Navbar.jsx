@@ -45,7 +45,7 @@ useEffect(()=>{
       <nav>
         <div className="logoBtn">
           <Link to="/" >
-          <img src={Logo} alt=""/>
+          {/* <img src={Logo} alt=""/> */}
           </Link>
           <h3 style={{color:'white'}}>Blogs Site</h3>
 
